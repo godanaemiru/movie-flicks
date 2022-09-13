@@ -1,0 +1,40 @@
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #22254b;
+    margin: 0;
+}
+
+.movie {
+    background-color: #373b69;
+    border-radius: 3px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2); 
+    margin: 2rem;
+    width: 220px;
+}
+
+.movie img {
+    width: 100%;
+}
+
+.movie-info {
+    color: #eee;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 1rem 1rem;
+}
+
+.movie-info h3 {
+    margin: 0;
+}
+
+.movie-info span {
+    background-color: #22254b;
+    border-radius: 3px;
+    padding: 0.25rem 0.5rem;
+}
