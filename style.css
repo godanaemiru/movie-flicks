@@ -9,11 +9,37 @@ body {
     margin: 0;
 }
 
+header {
+    background-color: #373b69;
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+header input {
+    background-color: transparent;
+    border: 2px solid #22254b;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 50px;
+}
+
+header input::placeholder {
+    color: #7378c5;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .movie {
     background-color: #373b69;
     border-radius: 3px;
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2); 
-    margin: 2rem;
+    overflow: hidden;
+    position: relative;
+    margin: 1.5rem;
     width: 220px;
 }
 
@@ -23,8 +49,9 @@ body {
 
 .movie-info {
     color: #eee;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     padding: 0.5rem 1rem 1rem;
 }
@@ -36,5 +63,37 @@ body {
 .movie-info span {
     background-color: #22254b;
     border-radius: 3px;
+    font-weight: bold;
     padding: 0.25rem 0.5rem;
+}
+
+.movie-info span.green {
+    color: rgb(26, 198, 26);  
+}
+.movie-info span.orange {
+    color: rgb(228, 156, 23);
+}
+.movie-info span.red {
+    color: rgb(232, 32, 32);
+}
+
+.overview {
+    background-color: #fff; 
+    padding: 2rem;
+    position: absolute;
+    max-height: 100%;
+    overflow: auto;
+    left: 0;
+    bottom: 0;
+    right: 0; 
+    transform: translateY(101%);
+    transition: transform 0.3s ease-in;
+}
+
+.overview h4 {
+    margin-top: 0;
+}
+
+.movie:hover .overview {
+    transform: translateY(0);
 }
